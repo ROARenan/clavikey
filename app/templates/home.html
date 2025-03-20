@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ title }}</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='styles.css') }}" />
+    </head>
+    <body>
+        <h1>Bem-vindo à {{ title }}</h1>
+        <p>Esta é a página principal da aplicação Flask.</p>
+        <a href="{{ url_for('main.sobre') }}">Sobre</a> |
+        <a href="{{ url_for('main.saudacao', nome='João') }}">Saudar João</a>
+    </body>
+</html>
