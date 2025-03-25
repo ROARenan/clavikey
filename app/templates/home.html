@@ -1,17 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{ title }}</title>
+        <title>Home Page</title>
         <link
-            rel="stylesheet"
-            href="{{ url_for('static', filename='styles.css') }}" />
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="../static/styles.css" />
     </head>
     <body>
-        <h1>Bem-vindo à {{ title }}</h1>
-        <p>Esta é a página principal da aplicação Flask.</p>
-        <a href="{{ url_for('main.sobre') }}">Sobre</a> |
-        <a href="{{ url_for('main.saudacao', nome='João') }}">Saudar João</a>
+        <!-- Navbar -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="../static/clavikey_logo_nbg.png" alt="Logo" />
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#section1">Seção 1</a></li>
+                    <li><a href="#section2">Seção 2</a></li>
+                    <li><a href="#section3">Seção 3</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Clavikey</h1>
+            <p>Um jeito simples de organizar suas chaves</p>
+            <a href="#section1" class="cta-button">Saiba mais</a>
+        </section>
+
+        <!-- Seção 1 -->
+        <section id="section1" class="section">
+            <h2>Seção 1: O que oferecemos</h2>
+            <p>
+                Detalhes sobre os serviços ou funcionalidades da sua aplicação.
+            </p>
+        </section>
+
+        <!-- Seção 2 -->
+        <section id="section2" class="section">
+            <h2>Seção 2: Como Funciona</h2>
+            <p>
+                Explique como sua aplicação funciona de forma simples e eficaz.
+            </p>
+        </section>
+
+        <!-- Seção 3 -->
+        <section id="section3" class="section">
+            <h2>Seção 3: Contato</h2>
+            <p>Entre em contato com a gente!</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>
+                    Feito por
+                    <a href="https://github.com/ROARenan" target="_blank"
+                        >ROARenan</a
+                    >
+                </p>
+            </div>
+        </footer>
+
+        <script src="../static/script.js"></script>
     </body>
 </html>
