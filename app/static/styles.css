@@ -44,6 +44,13 @@ nav {
     color: #ff6347;
 }
 
+.page-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
 .logo img {
     width: 60px;
 }
