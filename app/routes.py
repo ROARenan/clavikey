@@ -20,6 +20,18 @@ def sobre():
 # Rota para uma página dinâmica (com parâmetro na URL)
 
 
+@bp.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Aqui você pode adicionar a lógica de autenticação
+        username = request.form['username']
+        password = request.form['password']
+        # Verifique as credenciais do usuário
+        # ...
+    return render_template('login.html', title='Login')
+# Rota para uma página dinâmica (com parâmetro na URL)
+
+
 @bp.route('/saudacao/<nome>')
 def saudacao(nome):
     return render_template('saudacao.html', nome=nome)
